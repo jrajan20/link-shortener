@@ -1,4 +1,4 @@
-import { ClerkProvider, SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { shadcn } from "@clerk/ui/themes";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -34,7 +34,7 @@ export default function RootLayout({
           <header className="flex items-center justify-between px-6 py-4 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black">
             <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Link Shortener</span>
             <div className="flex items-center gap-3">
-              <SignedOut>
+              <Show when="signed-out">
                 <SignInButton mode="modal">
                   <button className="rounded-full border border-zinc-300 dark:border-zinc-700 px-4 py-1.5 text-sm font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
                     Sign in
@@ -45,10 +45,10 @@ export default function RootLayout({
                     Sign up
                   </button>
                 </SignUpButton>
-              </SignedOut>
-              <SignedIn>
+              </Show>
+              <Show when="signed-in">
                 <UserButton />
-              </SignedIn>
+              </Show>
             </div>
           </header>
           {children}
