@@ -17,3 +17,4 @@ Read the relevant docs file **before** writing any code in that domain. All docs
 | Clerk auth — only auth method, modal sign-in, route protection  | [docs/auth.md](docs/auth.md)         | Any auth, user, protected route, or redirect logic |
 | Drizzle ORM + Neon database                                     | [docs/database.md](docs/database.md) | Any DB query or schema change                      |
 | Tailwind v4 + shadcn/ui + Base UI                               | [docs/styling.md](docs/styling.md)   | Any UI or styling work                             |
+| UI components — shadcn/ui only, no custom primitives            | [docs/ui.md](docs/ui.md)             | Any time you create or modify a UI component       |
