@@ -10,10 +10,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 Read the relevant docs file **before** writing any code in that domain. All docs are in the `/docs` directory. ALWAYS refer to the relevant .md file BEFORE generating any code.
 
-| Domain                                                          | File                                 | When to Read                       |
-| --------------------------------------------------------------- | ------------------------------------ | ---------------------------------- |
-| Project overview, stack, structure                              | [docs/overview.md](docs/overview.md) | Always — read first                |
-| Next.js 16 conventions (App Router, proxy.ts, Server Functions) | [docs/nextjs.md](docs/nextjs.md)     | Any Next.js file                   |
-| Clerk auth patterns                                             | [docs/auth.md](docs/auth.md)         | Any auth, user, or protected route |
-| Drizzle ORM + Neon database                                     | [docs/database.md](docs/database.md) | Any DB query or schema change      |
-| Tailwind v4 + shadcn/ui + Base UI                               | [docs/styling.md](docs/styling.md)   | Any UI or styling work             |
+| Domain                                                          | File                                 | When to Read                                       |
+| --------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| Project overview, stack, structure                              | [docs/overview.md](docs/overview.md) | Always — read first                                |
+| Next.js 16 conventions (App Router, proxy.ts, Server Functions) | [docs/nextjs.md](docs/nextjs.md)     | Any Next.js file                                   |
+| Clerk auth — only auth method, modal sign-in, route protection  | [docs/auth.md](docs/auth.md)         | Any auth, user, protected route, or redirect logic |
+| Drizzle ORM + Neon database                                     | [docs/database.md](docs/database.md) | Any DB query or schema change                      |
+| Tailwind v4 + shadcn/ui + Base UI                               | [docs/styling.md](docs/styling.md)   | Any UI or styling work                             |
