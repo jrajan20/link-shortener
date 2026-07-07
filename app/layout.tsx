@@ -2,6 +2,7 @@ import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from "@cl
 import { shadcn } from "@clerk/ui/themes";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Button } from "@/components/ui/button";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">
         <ClerkProvider appearance={{ theme: shadcn }}>
@@ -35,15 +36,15 @@ export default function RootLayout({
             <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Link Shortener</span>
             <div className="flex items-center gap-3">
               <Show when="signed-out">
-                <SignInButton mode="modal">
-                  <button className="rounded-full border border-zinc-300 dark:border-zinc-700 px-4 py-1.5 text-sm font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                <SignInButton mode="modal" asChild>
+                  <Button variant="outline" className="rounded-full">
                     Sign in
-                  </button>
+                  </Button>
                 </SignInButton>
-                <SignUpButton mode="modal">
-                  <button className="rounded-full bg-zinc-900 dark:bg-zinc-50 px-4 py-1.5 text-sm font-medium text-white dark:text-zinc-900 hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors">
+                <SignUpButton mode="modal" asChild>
+                  <Button className="rounded-full">
                     Sign up
-                  </button>
+                  </Button>
                 </SignUpButton>
               </Show>
               <Show when="signed-in">
