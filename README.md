@@ -2,6 +2,8 @@
 
 A full-stack URL shortening application with user authentication, built with Next.js 16 and a modern serverless stack.
 
+BUILT COMPLETELY USING GITHUB COPILOT
+
 ## Tech Stack
 
 | Layer      | Technology                                                          |
