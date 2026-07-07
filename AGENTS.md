@@ -8,7 +8,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # Agent Coding Standards
 
-Read the relevant docs file **before** writing any code in that domain. All docs are in the `/docs` directory. ALWAYS refer to the relevant .md file BEFORE generating any code.
+**CRITICAL IMPORTANCE:** You MUST read the relevant documentation files **before** generating any code in that domain. Do not rely on your training data for this project. All docs are in the `/docs` directory. ALWAYS use the `read_file` tool to read the relevant `.md` file BEFORE generating any code. Failure to do so will result in incorrect implementations.
 
 | Domain                                                          | File                                 | When to Read                                       |
 | --------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
