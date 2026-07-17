@@ -72,7 +72,7 @@ export default async function Home() {
           real-time click analytics and manage everything from one dashboard.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <SignUpButton mode="modal" asChild>
+          <SignUpButton mode="modal" forceRedirectUrl="/dashboard" asChild>
             <Button size="lg" className="rounded-full px-8">
               Get started for free
             </Button>

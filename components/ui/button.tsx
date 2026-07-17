@@ -44,8 +44,10 @@ function Button({
   className,
   variant = "default",
   size = "default",
+  asChild,
   ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
+}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants> & { asChild?: boolean }) {
+  // Base UI doesn't support asChild - destructure it to prevent it from reaching the DOM
   return (
     <ButtonPrimitive
       data-slot="button"

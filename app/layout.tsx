@@ -32,17 +32,21 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">
-        <ClerkProvider appearance={{ theme: shadcn }}>
+        <ClerkProvider 
+          appearance={{ theme: shadcn }}
+          signInFallbackRedirectUrl="/dashboard"
+          signUpFallbackRedirectUrl="/dashboard"
+        >
           <header className="flex items-center justify-between px-6 py-4 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black">
             <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Link Shortener</span>
             <div className="flex items-center gap-3">
               <Show when="signed-out">
-                <SignInButton mode="modal" asChild>
+                <SignInButton mode="modal" forceRedirectUrl="/dashboard" asChild>
                   <Button variant="outline" className="rounded-full">
                     Sign in
                   </Button>
                 </SignInButton>
-                <SignUpButton mode="modal" asChild>
+                <SignUpButton mode="modal" forceRedirectUrl="/dashboard" asChild>
                   <Button className="rounded-full">
                     Sign up
                   </Button>

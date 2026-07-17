@@ -1,8 +1,14 @@
-import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
+import { integer, pgTable, varchar, text, timestamp, index } from "drizzle-orm/pg-core";
 
-export const usersTable = pgTable("users", {
-  id: integer().primaryKey().generatedAlwaysAsIdentity(),
-  name: varchar({ length: 255 }).notNull(),
-  age: integer().notNull(),
-  email: varchar({ length: 255 }).notNull().unique(),
-});
+export const linksTable = pgTable(
+  "links",
+  {
+    id: integer().primaryKey().generatedAlwaysAsIdentity(),
+    slug: varchar({ length: 255 }).notNull().unique(),
+    originalUrl: text().notNull(),
+    userId: varchar({ length: 255 }).notNull(),
+    createdAt: timestamp({ mode: "string", withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp({ mode: "string", withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("user_id_idx").on(table.userId)]
+);
