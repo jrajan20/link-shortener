@@ -77,12 +77,6 @@ export default async function Home() {
               Get started for free
             </Button>
           </SignUpButton>
-          <a
-            href="#features"
-            className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-full px-8")}
-          >
-            See features
-          </a>
         </div>
       </section>
 
